@@ -40,3 +40,10 @@ print (
       "Time taken to sort 32000  elements with Selection_Sort ",
       round(Selection_Sort(32000))
       )
+
+'''
+    Time taken to sort 4000  elements with Selection_Sort  1
+    Time taken to sort 8000  elements with Selection_Sort  4
+    Time taken to sort 16000  elements with Selection_Sort  16
+    Time taken to sort 32000  elements with Selection_Sort  67
+'''
