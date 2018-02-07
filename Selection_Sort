@@ -1,0 +1,42 @@
+import random
+import time
+
+
+def Selection_Sort(noOfElements):
+    listOfElements = []
+    for i in range(noOfElements):
+            listOfElements.append(random.randint(0, 10))
+    listOfElements.sort()
+    listOfElements.reverse()
+#   print("Before sorting",listOfElements)
+    start = time.time()
+    for i in range(noOfElements - 1):
+        key = listOfElements[i]
+        j = i + 1
+        for k in range(j, noOfElements):
+            if listOfElements[k] < key:
+                key = listOfElements[k]
+                index = k
+                listOfElements[i], listOfElements[index] =
+                listOfElements[index], listOfElements[i]
+        # print("For ith loop ",i , listOfElements)
+    # print("After Sorting", listOfElements)
+    end = time.time()
+    return end - start
+
+print (
+      "Time taken to sort 4000  elements with Selection_Sort ",
+      round(Selection_Sort(4000))
+      )
+print (
+      "Time taken to sort 8000  elements with Selection_Sort ",
+      round(Selection_Sort(8000))
+      )
+print (
+      "Time taken to sort 16000  elements with Selection_Sort ",
+      round(Selection_Sort(16000))
+      )
+print (
+      "Time taken to sort 32000  elements with Selection_Sort ",
+      round(Selection_Sort(32000))
+      )
